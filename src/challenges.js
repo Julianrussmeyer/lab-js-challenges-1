@@ -177,7 +177,7 @@ function greatestProduct(matrix) {
   for (let i = 0; i < matrix.length; i++) {
     let row = matrix[i];
     for (let j = 0; j < row.length - 3; j++) {
-      let challenger = row[j] + row[j + 1] + row[j + 2] + row[j + 3];
+      let challenger = row[j] * row[j + 1] * row[j + 2] * row[j + 3];
       if (challenger > champion) {
         champion = challenger;
       }
@@ -188,7 +188,7 @@ function greatestProduct(matrix) {
     let row = matrix[i];
     for (let j = 0; j < row.length - 3; j++) {
       let challenger =
-        matrix[i][j] + matrix[i][j + 1] + matrix[i][j + 2] + matrix[i][j + 3];
+        matrix[i][j] * matrix[i][j + 1] * matrix[i][j + 2] * matrix[i][j + 3];
       if (challenger > champion) {
         champion = challenger;
       }
